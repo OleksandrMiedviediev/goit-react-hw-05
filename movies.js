@@ -15,5 +15,16 @@ export const trendMovies = async () => {
     "/trending/movie/day?language=en-US",
     options
   );
+
   return response.data.results;
+};
+
+export const getMovieById = async (movieId) => {
+  const response = await axios.get(
+    `/movie/${movieId}?language=en-US`,
+    options
+    
+  );
+  return response.data;
+  
 };

@@ -1,5 +1,7 @@
 .container{
     box-shadow: 0px 3px 6px teal;
+    margin-bottom: 20px;
+    background-color: teal;
 }
 
 .link{
@@ -10,5 +12,5 @@
 }
 
 .active{
-    color: orangered;
+    color: white;
 }

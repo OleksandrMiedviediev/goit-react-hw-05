@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    gap: 15px;
+    background-color: teal;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.title{
+    color: white;
+}
+.text{
+    color:  rgb(255, 174, 0);
+}
