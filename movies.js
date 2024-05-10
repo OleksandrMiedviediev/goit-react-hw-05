@@ -23,8 +23,27 @@ export const getMovieById = async (movieId) => {
   const response = await axios.get(
     `/movie/${movieId}?language=en-US`,
     options
-    
   );
   return response.data;
-  
+};
+
+export const fetchMovieCast = async (movieId) => {
+  const response = await axios.get(
+    `/movie/${movieId}/credits?language=en-US`,
+    options
+  );
+  return response.data.cast;
+};
+
+export const fetchMovieReviews = async (movieId) => {
+  const response = await axios.get(
+    `/movie/${movieId}/reviews?language=en-US`,
+    options
+  );
+  return response.data.results;
+};
+
+export const fetchMoviesName = async (name) => {
+  const response = await axios.get(`/search/movie?query=${name}&language=en-US`, options);
+  return response.data.results;
 };

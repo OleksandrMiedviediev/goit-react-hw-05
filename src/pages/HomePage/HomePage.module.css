@@ -2,5 +2,5 @@
     font-size: 35px;
     display: flex;
     justify-content: center;
-    color: teal;
+    text-shadow: 2px 4px 4px teal;
 }

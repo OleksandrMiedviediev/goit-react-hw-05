@@ -1,0 +1,13 @@
+.title{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 4px 4px teal;
+}
+
+.container {
+    padding: 0px 24px;
+    margin: 32px 0px 18px 0px;
+    display: flex;
+    justify-content: space-between;
+}

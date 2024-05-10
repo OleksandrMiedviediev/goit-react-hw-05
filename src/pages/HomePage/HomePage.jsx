@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import MovieList from "../../components/MovieList/MovieList";
 import {trendMovies} from "../../../movies"
-import Loader from "../../components/Loading/Loader";
+import Loader from "../../components/Loader/Loader";
 import css from './HomePage.module.css'
 
 export default function HomePage() {

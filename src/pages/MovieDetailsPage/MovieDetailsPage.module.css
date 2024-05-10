@@ -1,0 +1,6 @@
+.container{
+    gap: 15px;
+    background-color: teal;
+    border-radius: 10px;
+    overflow: hidden;
+}
