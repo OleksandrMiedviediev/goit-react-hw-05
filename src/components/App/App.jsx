@@ -4,7 +4,6 @@ import MoviesPage from '../../pages/MoviesPage/MoviesPage'
 import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage'
 import MoviesDetailsPage from '../../pages/MovieDetailsPage/MovieDetailsPage'
 import Layout from '../Layout/Layout'
-import './App.module.css'
 
 export default function App() {
 
