@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useParams, Outlet, useLocation, Link } from "react-router-dom";
+import { useParams, Outlet, useLocation, Link, NavLink } from "react-router-dom";
 import { getMovieById } from "../../../movies";
 import Loader from "../../components/Loader/Loader"
 import MovieCard from '../../components/MovieCard/MovieCard'
@@ -12,8 +12,11 @@ export default function MoviesDetailsPage() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
     const{movieId} = useParams();
+
+
     const location = useLocation();
-    const backLinkURLRef = useRef(location.state ?? "/movies");
+    const backLinkURLRef = useRef(location.state ?? "./")
+
     useEffect (()=>{
     async function fetchMovie(movieId){
         try {
@@ -32,8 +35,8 @@ export default function MoviesDetailsPage() {
     return (   
         <div>
             {loading&&<Loader/>}
-            <Link to={backLinkURLRef.current} className={css.linkDescr}>
-                  <p><FaArrowLeft />Go back</p></Link>
+            <NavLink to={backLinkURLRef.current} className={css.btn} >
+            <p className={css.back}><FaArrowLeft />Go back</p></NavLink>
             {error && <div>Error fetching movies.</div>}
             <div className={css.container}>
             {movie && 

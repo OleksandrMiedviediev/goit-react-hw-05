@@ -4,3 +4,22 @@
     border-radius: 10px;
     overflow: hidden;
 }
+.btn{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+
+}
+.back{
+    display: flex;
+    align-items: center;
+    background-color: teal;
+    width: 100px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.back:hover, .back.active{
+    transform: scale(1.1);
+    box-shadow: 0px 3px 6px teal;
+}

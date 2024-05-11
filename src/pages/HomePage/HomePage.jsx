@@ -3,13 +3,13 @@ import MovieList from "../../components/MovieList/MovieList";
 import {trendMovies} from "../../../movies"
 import Loader from "../../components/Loader/Loader";
 import css from './HomePage.module.css'
+import { useLocation } from "react-router-dom";
 
 export default function HomePage() {
     
     const [movies, setMovies] = useState([])
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
-
 
     useEffect(() => {
         async function trendMoviesEffect(){
@@ -32,7 +32,7 @@ export default function HomePage() {
         <h1 className={css.title}>Trending today</h1>
         {loading&&<Loader/>}
         {error && <div>Error fetching movies.</div>}
-        <MovieList movies={movies} />
+        <MovieList movies={movies}/>
     </div>;
     
 }

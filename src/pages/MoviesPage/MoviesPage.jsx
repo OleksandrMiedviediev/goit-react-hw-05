@@ -4,7 +4,7 @@ import MovieList from "../../components/MovieList/MovieList";
 import { fetchMoviesName } from "../../../movies"
 import css from './MoviesPage.module.css'
 
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 
 export default function MoviesPage() {
@@ -43,17 +43,20 @@ export default function MoviesPage() {
       );
     }, [ownerParam, movies]);
 
+const location = useLocation();
+
+
     return (
         <div>
 
           <div className={css.container}>
             <h2 className={css.title}>Movies</h2>
-            <Search onFilter={changeFilter} />
+            <Search onFilter={changeFilter}/>
           </div>
             
             {loading && <Loader />}
             {error && <b>Error...</b>}
-            {movies && <MovieList movies={filteredMovies} />} 
+            {movies && <MovieList movies={filteredMovies} state={location} />} 
 
         </div>
     );

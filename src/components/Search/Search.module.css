@@ -1,0 +1,18 @@
+.form{
+    display: flex;
+    gap: 15px;
+}
+
+.input{
+    width: 250px;
+    height: 25px;
+    border-radius: 15px;
+    color: white;
+    border-color: teal;
+    background-color: teal;
+}
+.btn{
+    border-radius: 15px;
+    color: white;
+    background-color: teal;
+}
