@@ -15,7 +15,7 @@ export default function MoviesDetailsPage() {
 
 
     const location = useLocation();
-    const backLinkURLRef = useRef(location.state ?? "./")
+    const backLinkURLRef = useRef(location.state ?? "/")
 
     useEffect (()=>{
     async function fetchMovie(movieId){
